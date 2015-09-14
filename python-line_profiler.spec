@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Moduł do optymalizacji linia po linii kodu funkcji
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	1.0
-Release:	4
+Release:	5
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/l/%{module}/%{module}-%{version}.tar.gz
@@ -134,7 +134,7 @@ rm -rf $RPM_BUILD_ROOT
 %{py3_sitedir}/kernprof.py
 %{py3_sitedir}/line_profiler.py
 %{py3_sitedir}/__pycache__
-%attr(755,root,root) %{py3_sitedir}/_line_profiler.cpython-*m.so
+%attr(755,root,root) %{py3_sitedir}/_line_profiler.cpython-*.so
 %attr(755,root,root) %{_bindir}/kernprof
 %{py3_sitedir}/%{module}-%{version}-py*.egg-info
 %endif
