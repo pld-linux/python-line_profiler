@@ -19,10 +19,12 @@ Source0:	https://pypi.python.org/packages/source/l/%{module}/%{module}-%{version
 URL:		https://github.com/rkern/line_profiler
 BuildRequires:	rpm-pythonprov
 %if %{with python2}
+BuildRequires:	python-Cython
 BuildRequires:	python-devel
 BuildRequires:	python-distribute
 %endif
 %if %{with python3}
+BuildRequires:	python3-Cython
 BuildRequires:	python3-devel
 BuildRequires:	python3-distribute
 BuildRequires:	python3-modules
