@@ -17,6 +17,7 @@ Group:		Libraries/Python
 Source0:	https://pypi.python.org/packages/source/l/%{module}/%{module}-%{version}.tar.gz
 # Source0-md5:	2f8352acfedf83f701a564583db5e14d
 URL:		https://github.com/rkern/line_profiler
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	rpm-pythonprov
 %if %{with python2}
 BuildRequires:	python-Cython
