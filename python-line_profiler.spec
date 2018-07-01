@@ -10,12 +10,12 @@ Summary:	module for doing line-by-line profiling of functions
 Summary(pl.UTF-8):	Moduł do optymalizacji linia po linii kodu funkcji
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
-Version:	1.0
-Release:	8
+Version:	2.1
+Release:	1
 License:	BSD
 Group:		Libraries/Python
-Source0:	https://pypi.python.org/packages/source/l/%{module}/%{module}-%{version}.tar.gz
-# Source0-md5:	2f8352acfedf83f701a564583db5e14d
+Source0:	https://github.com/rkern/line_profiler/archive/%{version}.tar.gz
+# Source0-md5:	bd1cb2ba21af02339beab7ddc3a69c66
 URL:		https://github.com/rkern/line_profiler
 BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	rpm-pythonprov
@@ -23,11 +23,13 @@ BuildRequires:	rpm-pythonprov
 BuildRequires:	python-Cython
 BuildRequires:	python-devel
 BuildRequires:	python-distribute
+BuildRequires:	python-ipython
 %endif
 %if %{with python3}
 BuildRequires:	python3-Cython
 BuildRequires:	python3-devel
 BuildRequires:	python3-distribute
+BuildRequires:	python3-ipython
 BuildRequires:	python3-modules
 %endif
 Requires:	python-modules
