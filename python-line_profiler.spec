@@ -11,7 +11,7 @@ Summary(pl.UTF-8):	Moduł do optymalizacji linia po linii kodu funkcji
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	2.1
-Release:	2
+Release:	3
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://github.com/rkern/line_profiler/archive/%{version}.tar.gz
