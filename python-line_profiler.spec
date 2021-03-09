@@ -5,13 +5,13 @@
 %bcond_without	python2 # CPython 2.x module
 %bcond_without	python3 # CPython 3.x module
 
-%define 	module	line_profiler
+%define		module	line_profiler
 Summary:	module for doing line-by-line profiling of functions
 Summary(pl.UTF-8):	Moduł do optymalizacji linia po linii kodu funkcji
 # Name must match the python module/package name (as in 'import' statement)
 Name:		python-%{module}
 Version:	2.1
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 Source0:	https://github.com/rkern/line_profiler/archive/%{version}.tar.gz
@@ -78,13 +78,13 @@ Dokumentacja API %{module}.
 %build
 %if %{with python2}
 CC="%{__cc}" \
-CFLAGS="%{rpmcppflags} %{rpmcflags}" \
+CFLAGS="%{rpmcppflags} %{rpmcflags} -DHAVE_GETTIMEOFDAY" \
 %py_build %{?with_tests:test}
 %endif
 
 %if %{with python3}
 CC="%{__cc}" \
-CFLAGS="%{rpmcppflags} %{rpmcflags}" \
+CFLAGS="%{rpmcppflags} %{rpmcflags} -DHAVE_GETTIMEOFDAY" \
 %py3_build %{?with_tests:test}
 %endif
 
