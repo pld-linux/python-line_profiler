@@ -24,6 +24,7 @@ BuildRequires:	python-Cython
 BuildRequires:	python-devel
 BuildRequires:	python-distribute
 BuildRequires:	python-ipython
+BuildRequires:	python-prompt_toolkit
 %endif
 %if %{with python3}
 BuildRequires:	python3-Cython
@@ -31,6 +32,7 @@ BuildRequires:	python3-devel
 BuildRequires:	python3-distribute
 BuildRequires:	python3-ipython
 BuildRequires:	python3-modules
+BuildRequires:	python3-prompt_toolkit
 %endif
 Requires:	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
