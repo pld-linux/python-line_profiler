@@ -29,7 +29,6 @@ BuildRequires:	python-prompt_toolkit
 %if %{with python3}
 BuildRequires:	python3-Cython
 BuildRequires:	python3-devel
-BuildRequires:	python3-distribute
 BuildRequires:	python3-ipython
 BuildRequires:	python3-modules
 BuildRequires:	python3-prompt_toolkit
